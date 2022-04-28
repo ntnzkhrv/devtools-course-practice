@@ -116,6 +116,7 @@ class Hashmap {
             throw std::string("Resize: new size less or equal current size");
 
         Hashmap<T, K> result(newSize);
+        result._size = this->size();
         for (int i = 0; i < this->maxSize; i++) {
             result.data[i] = this->data[i];
         }

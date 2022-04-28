@@ -78,11 +78,16 @@ TEST(USTIUZHANIN_NIKITA_HASHMAP_TESTS, COPY) {
     h.insert("str", 1);
     h.insert("string", 11);
     Hashmap<string, int> hh;
-    ASSERT_NO_THROW(hh = h);
+    hh = h;
+
+    ASSERT_EQ(h["str"], hh["str"]);
+    ASSERT_EQ(h["string"], hh["string"]);
 }
 
 TEST(USTIUZHANIN_NIKITA_HASHMAP_TESTS, RESIZE_BY_INSERT) {
     Hashmap<string, int> h(2);
     h.insert("str", 1);
-    ASSERT_NO_THROW(h.insert("string", 11));
+    h.insert("string", 11);
+    h.insert("s", 111);
+    ASSERT_FALSE(h.isFull());
 }
