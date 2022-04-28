@@ -20,6 +20,7 @@ TEST(USTIUZHANIN_NIKITA_HASHMAP_TESTS, ASSERT_RESIZE) {
 
 TEST(USTIUZHANIN_NIKITA_HASHMAP_TESTS, CORRECT_INSERT) {
     Hashmap<string, int> h;
+    h.size();
     string key = "myStr";
     int value = 1;
 
@@ -90,4 +91,11 @@ TEST(USTIUZHANIN_NIKITA_HASHMAP_TESTS, RESIZE_BY_INSERT) {
     h.insert("string", 11);
     h.insert("s", 111);
     ASSERT_FALSE(h.isFull());
+}
+
+TEST(USTIUZHANIN_NIKITA_HASHMAP_TESTS, COPY_SELF) {
+    Hashmap<string, int> h(2);
+    h.insert("str", 1);
+    h.insert("string", 11);
+    ASSERT_NO_THROW(h = h);
 }
