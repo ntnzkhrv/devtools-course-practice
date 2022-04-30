@@ -1,17 +1,14 @@
 // Copyright 2022 Zakharov Anton
-#include <gtest/gtest.h>
 
+#include <gtest/gtest.h>
 #include "include/complex_number.h"
 
 TEST(Zakharov_Anton_ComplexNumberTest, Can_Create_Zero) {
-    // Arrange
     double re = 0.0;
     double im = 0.0;
 
-    // Act
     ComplexNumber z(re, im);
 
-    // Assert
     EXPECT_EQ(re, z.getRe());
     EXPECT_EQ(im, z.getIm());
 }
@@ -37,19 +34,16 @@ TEST(Zakharov_Anton_ComplexNumberTest, Can_Create_Minus) {
     EXPECT_EQ(s1 == result, 1);
 }
 TEST(Zakharov_Anton_ComplexNumberTest, Can_Perform_Difference) {
-    // Arrange
     double a_re = 10.0;
     double a_im = 15.0;
 
     double b_re = 19.0;
     double b_im = 28.0;
 
-    // Act
     ComplexNumber a(a_re, a_im);
     ComplexNumber b(b_re, b_im);
     b = a - b;
 
-    // Assert
     EXPECT_EQ(a_re - b_re, b.getRe());
     EXPECT_EQ(a_im - b_im, b.getIm());
 }
