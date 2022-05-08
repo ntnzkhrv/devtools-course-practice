@@ -91,7 +91,7 @@
 | [Правило 30](https://en.wikipedia.org/wiki/Rule_30) |Галиндо Толедо Хавьер Эдуардо 381908-4 | |
 | [Вычисление скидок на книги](https://github.com/garora/TDD-Katas/blob/master/KatasReadme.md#harry-potter-) |Гордей М.В 381906-2 | |
 | [Перевод чисел в их словесное написание на английском](http://codingdojo.org/kata/NumbersInWords/) |Зайцев Александр 381906-1 | |
-| [Работа с числовыми промежутками](http://codingdojo.org/kata/Range/) |Троегубова Александра 381903_3 | |
+| [Работа с числовыми промежутками](http://codingdojo.org/kata/Range/) |Троегубова Александра 381903_3 |Петрова Полина 381903-3 |
 | [Реализовать печать цифр в псевдографике](https://github.com/garora/TDD-Katas/blob/master/KatasReadme.md#lcd-digits-) | Мясникова Варвара 381908-1 | Китаев Павел 381908-4 |
 | Поиск в тексте регулярных выражений (упрощенные) | Фролов Глеб 381908-2 | |
 | [Ипотечный калькулятор](http://calculator-ipoteka.ru/calculator.php) | Cеребренников Мирон 381908-2 | |
