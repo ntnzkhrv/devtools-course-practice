@@ -89,7 +89,7 @@
 |---|---|---|
 | [Игра "Жизнь" Конвея](https://github.com/garora/TDD-Katas/blob/master/KatasReadme.md#game-of-life-) |Пинежанин Евгений 381903_3 | |
 | [Правило 30](https://en.wikipedia.org/wiki/Rule_30) |Галиндо Толедо Хавьер Эдуардо 381908-4 | |
-| [Вычисление скидок на книги](https://github.com/garora/TDD-Katas/blob/master/KatasReadme.md#harry-potter-) |Гордей М.В 381906-2 | |
+| [Вычисление скидок на книги](https://github.com/garora/TDD-Katas/blob/master/KatasReadme.md#harry-potter-) |Гордей М.В 381906-2 |Кривошеев Мирон 381908-2 |
 | [Перевод чисел в их словесное написание на английском](http://codingdojo.org/kata/NumbersInWords/) |Зайцев Александр 381906-1 | |
 | [Работа с числовыми промежутками](http://codingdojo.org/kata/Range/) |Троегубова Александра 381903_3 |Петрова Полина 381903-3 |
 | [Реализовать печать цифр в псевдографике](https://github.com/garora/TDD-Katas/blob/master/KatasReadme.md#lcd-digits-) | Мясникова Варвара 381908-1 | Китаев Павел 381908-4 |
