@@ -87,7 +87,7 @@
 
 | Тема | ЛР#2 | ЛР#3 |
 |---|---|---|
-| [Игра "Жизнь" Конвея](https://github.com/garora/TDD-Katas/blob/master/KatasReadme.md#game-of-life-) |Пинежанин Евгений 381903_3 | |
+| [Игра "Жизнь" Конвея](https://github.com/garora/TDD-Katas/blob/master/KatasReadme.md#game-of-life-) |Пинежанин Евгений 381903_3 | Орлов Максим 381903_3 |
 | [Правило 30](https://en.wikipedia.org/wiki/Rule_30) |Галиндо Толедо Хавьер Эдуардо 381908-4 | Кургузиков Кирилл 381908-4 |
 | [Вычисление скидок на книги](https://github.com/garora/TDD-Katas/blob/master/KatasReadme.md#harry-potter-) |Гордей М.В 381906-2 |Кривошеев Мирон 381908-2 |
 | [Перевод чисел в их словесное написание на английском](http://codingdojo.org/kata/NumbersInWords/) |Зайцев Александр 381906-1 | Каменев Илья 381906-3|
