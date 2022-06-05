@@ -5,7 +5,7 @@ file(GLOB hdrs "../include/*.h")
 set_source_files_properties(${srcs} ${hdrs} PROPERTIES
     LABELS "${MODULE};Library")
 
-add_library(${target} STATIC ${srcs} ${hdrs})
+add_library(${target} STATIC ${srcs} ${hdrs} "combinations_application.cpp")
 set_target_properties(${target} PROPERTIES
     OUTPUT_NAME ${MODULE}
     LABELS "${MODULE};Library")
