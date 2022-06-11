@@ -44,3 +44,9 @@ add_test(NAME ${prefix}_run_test_5
 set_tests_properties(${prefix}_run_test_5 PROPERTIES
     PASS_REGULAR_EXPRESSION "10"
     LABELS "${MODULE}")
+
+add_test(NAME ${prefix}_run_with_negative_value
+    COMMAND ${APPLICATION} -5 10)
+set_tests_properties(${prefix}_run_with_negative_value PROPERTIES
+    PASS_REGULAR_EXPRESSION "Error in arguments :\nnegative value"
+    LABELS "${MODULE}")
