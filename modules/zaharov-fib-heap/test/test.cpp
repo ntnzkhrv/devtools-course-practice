@@ -36,10 +36,10 @@ TEST(FibHeapTest, fib_heap_works) {
     std::vector<int> values =
     { 5, 19, 2, 14, 27, 43, 31, 0, 1, 42, 11, 4, 7, 9, 67, 21, 6 };
     std::vector<FibHeapNode*> nodes;
-    for (int i = 0; i < values.size(); i++) {
+    for (int i = 0; i < static_cast<int>(values.size()); i++) {
         nodes.push_back(f.insert(values[i]));
     }
-    for (int i = 0; i < nodes.size(); i++) {
+    for (int i = 0; i < static_cast<int>(nodes.size()); i++) {
         f.delete_node(nodes[i]);
     }
     ASSERT_EQ(0, f.m_numOfNodes);
@@ -49,10 +49,10 @@ TEST(FibHeapTest, fib_heap_works2) {
     FibHeap f;
     std::vector<int> values =
     { 5, 19, 2, 14, 27, 43, 31, 0, 1, 42, 11, 4, 7, 9, 67, 21, 6 };
-    for (int i = 0; i < values.size(); i++) {
+    for (int i = 0; i < static_cast<int>(values.size()); i++) {
         f.insert(values[i]);
     }
-    for (int i = 0; i < values.size(); i++) {
+    for (int i = 0; i < static_cast<int>(values.size()); i++) {
         f.extract_min();
     }
     ASSERT_EQ(0, f.m_numOfNodes);
@@ -63,10 +63,10 @@ TEST(FibHeapTest, fib_heap_works3) {
     std::vector<int> values =
     { 5, 19, 2, 14, 27, 43, 31, 0, 1, 42, 11, 4, 7, 9, 67, 21, 6 };
     std::vector<FibHeapNode*> nodes;
-    for (int i = values.size() - 1; i >= 0; i--) {
+    for (int i = static_cast<int>(values.size()) - 1; i >= 0; i--) {
         nodes.push_back(f.insert(values[i]));
     }
-    for (int i = 0; i < nodes.size(); i++) {
+    for (int i = 0; i < static_cast<int>(nodes.size()); i++) {
         f.delete_node(nodes[i]);
     }
     ASSERT_EQ(0, f.m_numOfNodes);
@@ -76,10 +76,10 @@ TEST(FibHeapTest, fib_heap_works4) {
     FibHeap f;
     std::vector<int> values =
     { 5, 19, 2, 14, 27, 43, 31, 0, 1, 42, 11, 4, 7, 9, 67, 21, 6 };
-    for (int i = values.size() - 1; i >= 0; i--) {
+    for (int i = static_cast<int>(values.size()) - 1; i >= 0; i--) {
         f.insert(values[i]);
     }
-    for (int i = 0; i < values.size(); i++) {
+    for (int i = 0; i < static_cast<int>(values.size()); i++) {
         f.extract_min();
     }
     ASSERT_EQ(0, f.m_numOfNodes);
