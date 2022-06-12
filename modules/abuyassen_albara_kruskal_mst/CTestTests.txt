@@ -3,3 +3,59 @@
 #############################################
 
 set(prefix "${MODULE}")
+
+add_test(
+    NAME ${prefix}_can_Run
+    COMMAND ${APPLICATION}
+)
+set_tests_properties (${prefix}_can_Run PROPERTIES
+    LABELS "${MODULE}")
+
+add_test(
+    NAME ${prefix}_can_Print_Help_Without_Arguments
+    COMMAND ${APPLICATION}
+)
+
+set_tests_properties (${prefix}_can_Print_Help_Without_Arguments PROPERTIES
+    PASS_REGULAR_EXPRESSION "This is minimum spanning tree finding"
+    LABELS "${MODULE}")
+
+add_test(
+    NAME ${prefix}_can_Check_Number_Of_Arguments
+    COMMAND ${APPLICATION} 1 2
+)
+set_tests_properties (${prefix}_can_Check_Number_Of_Arguments PROPERTIES
+    PASS_REGULAR_EXPRESSION "ERROR: Should be at least 3 arguments."
+    LABELS "${MODULE}")
+
+add_test(
+    NAME ${prefix}_can_Detect_Wrong_Edges_Or_Nodes_Number_Format
+    COMMAND ${APPLICATION} 1 x 1,2,3
+)
+set_tests_properties (${prefix}_can_Detect_Wrong_Edges_Or_Nodes_Number_Format PROPERTIES
+    PASS_REGULAR_EXPRESSION "Wrong edges or nodes number format!"
+    LABELS "${MODULE}")
+
+add_test(
+    NAME ${prefix}_can_Detect_Wrong_Edge_Format
+    COMMAND ${APPLICATION} 2 1 0,1,x
+)
+set_tests_properties (${prefix}_can_Detect_Wrong_Edge_Format PROPERTIES
+    PASS_REGULAR_EXPRESSION "Wrong edge format!"
+    LABELS "${MODULE}")
+    
+add_test(
+    NAME ${prefix}_can_Detect_Wrong_Edge_Number
+    COMMAND ${APPLICATION} 1 2 0,1,5
+)
+set_tests_properties (${prefix}_can_Detect_Wrong_Edge_Number PROPERTIES
+    PASS_REGULAR_EXPRESSION "Wrong number of edges provided!"
+    LABELS "${MODULE}")
+
+add_test(
+    NAME ${prefix}_can_Find_MST
+    COMMAND ${APPLICATION} 3 3 0,1,5 1,2,1 2,0,2
+)
+set_tests_properties (${prefix}_can_Find_MST PROPERTIES
+    PASS_REGULAR_EXPRESSION "MST: 1->2 2->0"
+    LABELS "${MODULE}")
