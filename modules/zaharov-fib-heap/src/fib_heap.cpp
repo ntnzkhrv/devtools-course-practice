@@ -7,7 +7,7 @@ const int FibHeap::m_minimumKey = 0x80000000;
 FibHeapNode* FibHeap::insert(int newKey) {
     FibHeapNode* newNode = _create_node(newKey);
     _insert_node(newNode);
-	return newNode;
+    return newNode;
 }
 
 int  FibHeap::extract_min() {
@@ -58,8 +58,7 @@ FibHeapNode* FibHeap::_extract_min_node() {
     _merge(mn, mn->child);
     if (mn == mn->right) {
         m_minNode = nullptr;
-    }
-    else {
+    } else {
         m_minNode = mn->right;
     }
     _remove_from_circular_list(mn);
@@ -82,12 +81,12 @@ void FibHeap::_unparent_all(FibHeapNode* x) {
 
 
 void FibHeap::_consolidate() {
-    int Dn = (int)(log2(m_numOfNodes) / log2(1.618));
+    int Dn = static_cast<int>(log2(m_numOfNodes) / log2(1.618));
     FibHeapNode** A = new FibHeapNode * [Dn + 1];
     for (int i = 0; i < Dn + 1; i++) {
         A[i] = nullptr;
     }
-    vector<FibHeapNode*> nodeList;
+    std::vector<FibHeapNode*> nodeList;
     auto node = m_minNode;
     do {
         nodeList.emplace_back(node);
@@ -99,7 +98,7 @@ void FibHeap::_consolidate() {
         while (A[d] != nullptr) {
             auto tmp = A[d];
             if (e->key > tmp->key) {
-                swap(e, tmp);
+                std::swap(e, tmp);
             }
             _make_child(tmp, e);
             A[d++] = nullptr;
@@ -142,12 +141,10 @@ void FibHeap::_cut(FibHeapNode* x, FibHeapNode* y) {
 
 void FibHeap::_cascading_cut(FibHeapNode* y) {
     FibHeapNode* z = y->parent;
-    if (z != nullptr)
-    {
+    if (z != nullptr) {
         if (y->mark == false)
             y->mark = true;
-        else
-        {
+        else {
             _cut(y, z);
             _cascading_cut(z);
         }

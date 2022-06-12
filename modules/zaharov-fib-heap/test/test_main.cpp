@@ -1,4 +1,4 @@
-// Copyright 2022 Novozhilov Alexandr
+// Copyright 2022 Zakharov Anton
 
 #include <gtest/gtest.h>
 
