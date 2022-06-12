@@ -1,5 +1,6 @@
 // Copyright 2022 Zaharov Anton
 #include <vector>
+#include <algorithm>
 #include "include/fib_heap.h"
 
 const int FibHeap::m_minimumKey = 0x80000000;
@@ -142,9 +143,9 @@ void FibHeap::_cut(FibHeapNode* x, FibHeapNode* y) {
 void FibHeap::_cascading_cut(FibHeapNode* y) {
     FibHeapNode* z = y->parent;
     if (z != nullptr) {
-        if (y->mark == false)
+        if (y->mark == false) {
             y->mark = true;
-        else {
+        } else {
             _cut(y, z);
             _cascading_cut(z);
         }

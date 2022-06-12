@@ -3,10 +3,8 @@
 #define MODULES_ZAHAROV_FIB_HEAP_INCLUDE_FIB_HEAP_H_
 #include <cmath>
 #include <vector>
-#include <algorithm>
 
-struct FibHeapNode
-{
+struct FibHeapNode {
     int key;
     FibHeapNode* left;
     FibHeapNode* right;
@@ -22,7 +20,6 @@ class FibHeap {
  public:
     FibHeapNode* m_minNode;
     int m_numOfNodes;
-    
     FibHeap() {
         m_minNode = nullptr;
         m_numOfNodes = 0;
@@ -33,6 +30,7 @@ class FibHeap {
     FibHeapNode* insert(int newKey);
     int  extract_min();
     void delete_node(FibHeapNode* x);
+
  private:
     static const int m_minimumKey;
     FibHeapNode* _create_node(int newKey);
